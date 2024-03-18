@@ -9,7 +9,7 @@ import java.util.Properties;
 public class Config {
     public static String GetAPIKey() {
         try (InputStream input = Config.class.getClassLoader().getResourceAsStream(
-                "application.properties")) {
+                "config.properties")) {
             Properties prop = new Properties();
             if (input == null) {
                 System.out.println("Sorry, unable to find application.properties");

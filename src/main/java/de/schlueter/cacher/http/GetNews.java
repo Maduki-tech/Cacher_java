@@ -7,12 +7,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class GetNews {
-
     @GetMapping("/news")
     public String getNews() {
-        String url = "https://newsapi.org/v2/top-headlines?country=us&apiKey="
-                + Config.GetAPIKey();
+        String url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=" + Config.GetAPIKey();
         return HTTPRequest.requestToNewsAPI(url);
     }
-
 }
